@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const Url = "https://f52zjf4r-3333.inc1.devtunnels.ms";
+export const Url = "https://task-backend-olive.vercel.app";
 
 const api = axios.create({
   baseURL: Url,
