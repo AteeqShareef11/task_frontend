@@ -19,7 +19,7 @@ const VehicleCard = ({ vehicle }) => {
                 sx={{ borderRadius: 4, p: 2 }}
             />
             <CardContent>
-                <Typography variant="h6" component="div" gutterBottom>
+                <Typography variant="h6" gutterBottom>
                     {vehicle?.carModel}
                 </Typography>
                 <Grid container alignItems="center" spacing={1} sx={{ mb: 2 }}>

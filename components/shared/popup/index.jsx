@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
+
 import * as React from 'react';
 
 import Slide from '@mui/material/Slide';
@@ -11,6 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 const Transition = React.forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
+Transition.displayName = 'Transition';
 
 export default function AlertDialogSlide({
     children,
