@@ -4,17 +4,16 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Url } from '@/app/services/httpcommon';
 
 const VehicleCard = ({ vehicle }) => {
 
 
     return (
-        <Card sx={{ maxWidth: 800, p: 2, height: "100%", overflow: "auto" }}>
+        <Card sx={{ height: "100%", overflow: "auto" }}>
             <CardMedia
                 component="img"
                 height="200"
-                image={Url + vehicle?.pictures[0]} // Use the first picture as thumbnail
+                image={vehicle?.pictures[0]} // Use the first picture as thumbnail
                 alt={vehicle?.carModel}
                 sx={{ borderRadius: 4, p: 2 }}
             />
@@ -49,7 +48,7 @@ const VehicleCard = ({ vehicle }) => {
                         <ImageList cols={3} gap={4}>
                             {vehicle?.pictures?.slice(1, vehicle?.maxPics).map((pic, index) => (
                                 <ImageListItem key={index}>
-                                    <img src={Url + pic} alt={`Additional pic ${index + 1}`} loading="lazy" />
+                                    <img src={pic} alt={`Additional pic ${index + 1}`} loading="lazy" />
                                 </ImageListItem>
                             ))}
                         </ImageList>

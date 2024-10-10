@@ -121,6 +121,7 @@ const VehicleList = () => {
                 title="Vehicle"
                 isHeader
                 maxWidth="md"
+                fullWidth
             >
                 <VehicleCard vehicle={selected} />
             </AlertDialogSlide>

@@ -128,7 +128,7 @@ export default function VehicleForm() {
       setPictures([]);
       router.push("/dashboard/vehicles");
     } catch (error) {
-      setError(error?.message || "Error submitting vehicle information");
+      setError(error?.response?.data?.message || error?.message);
       setSuccess("");
     } finally {
       setIsSubmitting(false);
@@ -172,7 +172,7 @@ export default function VehicleForm() {
                   helperText={errors.carModel}
                   value={values.carModel}
                   onChange={handleOnChange}
-                  required
+
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -186,7 +186,6 @@ export default function VehicleForm() {
                   helperText={errors.price}
                   value={values.price}
                   onChange={handleOnChange}
-                  required
                   InputProps={{
                     startAdornment: <Typography sx={{ mr: 1 }}>$</Typography>,
                   }}
@@ -203,7 +202,6 @@ export default function VehicleForm() {
                   helperText={errors.phone}
                   value={values.phone}
                   onChange={handleOnChange}
-                  required
                   inputProps={{ maxLength: 11 }}
                 />
               </Grid>
@@ -217,7 +215,6 @@ export default function VehicleForm() {
                   helperText={errors.city}
                   value={values.city}
                   onChange={handleOnChange}
-                  required
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
